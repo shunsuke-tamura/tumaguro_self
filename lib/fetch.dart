@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dotenv/dotenv.dart';
 import 'package:http/http.dart' as http;
 
-Future<dynamic> hoge() async {
+Future<Map<String, dynamic>> fetchProducts() async {
   var env = DotEnv(includePlatformEnvironment: true)..load();
 
   final url = Uri.parse('https://api.stripe.com/v1/products');
