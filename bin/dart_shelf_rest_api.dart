@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dart_shelf_rest_api/product_list.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:shelf/shelf.dart';
 import 'package:shelf_router/shelf_router.dart';
@@ -16,6 +17,7 @@ class Service {
     final router = Router();
 
     router.get('/healthcheck', _healthcheckHandler);
+    router.get('/product_list', productListHandler);
 
     return router;
   }
