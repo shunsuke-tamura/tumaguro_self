@@ -1,12 +1,22 @@
 class Metadata {
-  Metadata(this.review);
+  Metadata(this.review, this.reviewNum, this.price, this.from);
 
   String review;
+  String reviewNum;
+  String price;
+  String from;
 
-  Metadata.fromJson(Map<String, dynamic> json) : review = json['review'];
+  Metadata.fromJson(Map<String, dynamic> json)
+      : review = json['review'],
+        reviewNum = json['reviewNum'],
+        price = json['price'],
+        from = json['from'];
 
   Map<String, dynamic> toJson() => {
         'review': review,
+        'reviewNum': reviewNum,
+        'price': price,
+        'from': from,
       };
 }
 
